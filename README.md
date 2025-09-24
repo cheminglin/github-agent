@@ -4,6 +4,20 @@
 
 ---
 
+## 目錄導覽
+- [什麼是 Model Context Protocol (MCP)](#什麼是-model-context-protocol-mcp)
+- [核心概念與能力模型](#核心概念與能力模型)
+- [連線生命週期與握手（Handshake）](#連線生命週期與握手handshake)
+- [傳輸層（Transports）](#傳輸層transports)
+- [訊息與結構化模式](#訊息與結構化模式)
+- [錯誤處理](#錯誤處理)
+- [安全與信任邊界](#安全與信任邊界)
+- [與 Agent/IDE 整合的實務建議](#與-agentide-整合的實務建議)
+- [官方規格章節連結](#官方規格章節連結)
+- [參考與延伸閱讀](#參考與延伸閱讀)
+
+---
+
 ## 什麼是 Model Context Protocol (MCP)
 
 MCP 是一個開放協議，用來標準化 LLM 應用如何向模型提供上下文與能力。你可以把 MCP 想像成「AI 應用的 USB-C」：
@@ -90,6 +104,23 @@ MCP 將「協議語義」與「傳輸實作」解耦，常見選項：
 - 將「資源」抽象為可列舉/可訂閱，利於在 IDE 側做檔案樹與資料視圖。
 - 以 schema-first 設計工具參數，並為每個工具提供簡短說明與範例 payload。
 - 對長流程動作使用串流回饋（progress events / incremental logs）。
+
+---
+
+## 官方規格章節連結
+- 總覽（Overview）：`https://modelcontextprotocol.io`
+- 具體規格（Specification）：`https://model-context-protocol.github.io/specification/`
+- 概念與架構（Concepts / Architecture）：`https://modelcontextprotocol.io/concepts`
+- 能力與模組（Capabilities: resources/tools/prompts）：`https://modelcontextprotocol.io/spec#capabilities`
+- 連線生命週期（Lifecycle / Initialize）：`https://modelcontextprotocol.io/spec#initialize`
+- 傳輸（Transports: stdio/WebSocket）：`https://modelcontextprotocol.io/spec#transports`
+- 工具（Tools API）：`https://modelcontextprotocol.io/spec#tools`
+- 資源（Resources API）：`https://modelcontextprotocol.io/spec#resources`
+- 提示（Prompts API）：`https://modelcontextprotocol.io/spec#prompts`
+- 錯誤碼（Error Codes）：`https://modelcontextprotocol.io/spec#errors`
+- 安全考量（Security Considerations）：`https://modelcontextprotocol.io/spec#security`
+
+> 以上連結可能因規格重構而調整，請以官方站點目錄為準。
 
 ---
 
